@@ -1,0 +1,119 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu&display=swap");
+body {
+  font-family: "Ubuntu", sans-serif;
+  background-color: gold;
+}
+
+button:active{
+  /* outline: 2px solid black; */
+  box-shadow: inset 1px 1px 1px 1px black;
+}
+
+#calculator {
+  width: 320px;
+  background-color: silver;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  position: relative;
+  border-radius: 5px;
+  box-shadow: 4px 3px 8px 2px #2c2f31;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+#clr-entry, #clr-all{
+  background-color: rgb(240, 89, 35);
+}
+
+#container {
+  display: flex;
+  justify-content: center;
+  background-image: linear-gradient(to right, rgb(16, 100, 209) , rgb(24, 197, 168));
+  margin: 20px auto;
+}
+
+#history{
+  height: 50px;
+  color: #444444;
+  /* border: 2px solid red; */
+  text-align: right;
+}
+
+#history-value{
+  font-size: 1.02rem;
+  margin-right: 3px;
+  margin-top: 6px;
+}
+
+#keyboard{
+  box-sizing: border-box;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+#merk{
+  width: 320px;
+  margin-top: 15px;
+  margin-left: 10px;
+}
+
+#nama-merk{
+  text-align: left;
+  font-weight: bold;
+}
+
+.number, .operator{
+  width: 60px;
+  height: 60px;
+  margin: 5px;
+  border-radius: 50%;
+  border-width: 0;
+  font-weight: bold;
+  font-size: 16px;
+  color: white;
+  cursor: pointer;
+  box-shadow: 2px 2px 2px 0px #000000;
+}
+
+.number{
+  background-color: #353535;
+}
+
+.operator{
+  background-color: #5b5a56;
+}
+
+#output{
+  height: 50px;
+  color: black;
+  /* border: 2px solid black; */
+  text-align: right;
+}
+
+#output-value{
+  font-size: 3rem;
+  margin-right: 3px;
+  margin-top: 6px;
+  /* border: 2px solid blue; */
+}
+
+#result{
+  width: 275px;
+  height: 128px;
+  background-color: rgb(207 226 230);
+  border-radius: 10px;
+  margin-top: 20px;
+  box-shadow: inset 1px 1px 1px 1px #2c2e31;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#root{
+  text-decoration: overline;
+}
+
