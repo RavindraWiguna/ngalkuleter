@@ -33,7 +33,7 @@ function updateOutput(num){
     var output = document.getElementById("output-value");
     var len = String(num).length;
     var size = "3rem";
-    if(len > 10)size = resizeFontOutput(len);
+    if(len > 8)size = resizeFontOutput(len);
     
     output.textContent = num;
     output.style.fontSize = size;
@@ -41,7 +41,7 @@ function updateOutput(num){
 
 function resizeFontOutput(x){
     // using math and statictic
-    var result = String(0.00325*x*x - 0.20881*x + 4.32914);
+    var result = String(0.00325*x*x - 0.20881*x + 4.20914);
     result += "rem";
     return result;
 }
