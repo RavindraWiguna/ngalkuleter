@@ -306,7 +306,7 @@ function clearEntry(){
     }
     inputVal = inputVal.substring(0, inputVal.length-1);
     updateTotalBracket(lastChar);
-    if(inputVal.length==0)inputVal="0";
+    if(inputVal.length==0){inputVal="0";curNumisNull=true;}
     updatePoint(inputVal);
     updateOutput(inputVal);
 }
