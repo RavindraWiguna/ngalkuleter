@@ -76,6 +76,8 @@ function isNotValidToAdd(lastChar, num){
 function hasHigherPrecedence(op1, op2){
     let w1 = operatorWeight(op1);
     let w2 = operatorWeight(op2);
+    alert(op1+" "+w1);
+    alert(op2+" "+w2);
     if(w1==w2){
         if(isRightAssociative(op1))return false;
         return true;
