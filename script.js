@@ -53,13 +53,11 @@ function resizeFontHistory(x){
 }
 
 /*Math operator function*/
-var opW = new Map();
-opW.set("^", 4);
-opW.set("*", 2);
-opW.set("/", 2);
-opW.set("%", 2);
-opW.set("+", 1);
-opW.set("-", 1);
+function operatorWeight(op){
+    if(op=="^")return 4;
+    if(op=="*" || op=="/" || op=="%")return 2;
+    if(op=="+" || op=="-")return 1;
+}
 
 function isNum(x){return !isNaN(x);}
 function isOperand(x){return isNum(x) || x=='.'};
@@ -76,8 +74,8 @@ function isNotValidToAdd(lastChar, num){
 
 //Check wether op1 has higher precedence
 function hasHigherPrecedence(op1, op2){
-    let w1 = opW[op1];
-    let w2 = opW[op2];
+    let w1 = operatorWeight(op1);
+    let w2 = operatorWeight(op2);
     if(w1==w2){
         if(isRightAssociative(op1))return false;
         return true;
