@@ -110,6 +110,11 @@ function infixToPostfix(equation){
                 stacc.pop();
             }
             stacc.pop();
+        }else if(ct == "e"){
+            result+="e";
+            result+=equation[i+1];
+            i++;
+            lastActOut=true;
         }
         else{
             //ct is operator, append comma
@@ -122,7 +127,7 @@ function infixToPostfix(equation){
                     result+="-";
                     result+=equation[i+1];
                     i++;
-                    result+=",";
+                    lastActOut=true;
                     continue;
                 }
             }
@@ -146,6 +151,7 @@ function infixToPostfix(equation){
         stacc.pop();
         lastActOut=true;
     }
+    alert(result);
     return result;
 }
 
@@ -174,7 +180,7 @@ function doMath(a, b, operator){
             break;
         default:
             alert("something wrong");
-            result = NaN;
+            result = "Error";
             break;
     }
     // console.log("result: "+result);
