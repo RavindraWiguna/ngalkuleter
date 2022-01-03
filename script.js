@@ -151,7 +151,6 @@ function infixToPostfix(equation){
         stacc.pop();
         lastActOut=true;
     }
-    alert(result);
     return result;
 }
 
